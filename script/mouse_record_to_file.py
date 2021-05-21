@@ -28,5 +28,7 @@ if exists(path_to_recordings):
         delete_txt_files_in_(path_to_recordings)
     with open(path_to_file, 'w') as rf:
         for i in range(10):
-            rf.write(f'the mouse position at {dt.now()} is {mouse.position}\n')
+            event = f'the mouse position at {dt.now()} is {mouse.position}\n'
+            print(event)
+            rf.write(event)
             sleep(.5)
